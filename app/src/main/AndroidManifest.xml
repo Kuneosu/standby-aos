@@ -56,7 +56,7 @@
             android:name=".StandbyDreamService"
             android:enabled="false"
             android:exported="true"
-            android:label="Fold 스탠바이 시계"
+            android:label="Standby Screen 시계"
             android:permission="android.permission.BIND_DREAM_SERVICE">
             <intent-filter>
                 <action android:name="android.service.dreams.DreamService" />

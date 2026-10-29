@@ -46,9 +46,9 @@ class MainActivity : ComponentActivity() {
                 val events by Diagnostics.events.collectAsStateWithLifecycle()
                 Surface(Modifier.fillMaxSize()) {
                     Column(Modifier.safeDrawingPadding().verticalScroll(rememberScrollState()).padding(24.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
-                        Text("FOLD / STANDBY", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                        Text("놓아두면, 시계.", style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.SemiBold)
-                        Text("Fold6 스탠바이 · ${BuildConfig.VERSION_NAME}", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("STANDBY SCREEN", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                        Text("나만의 대기 화면.", style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.SemiBold)
+                        Text("Standby Screen · ${BuildConfig.VERSION_NAME}", color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Section("나만의 스탠바이") {
                             Text("글꼴과 색상, 배경 사진, 움직이는 GIF까지. 시계와 버튼을 원하는 자리에 놓아보세요.")
                             Button(onClick = { startActivity(Intent(this@MainActivity, EditorActivity::class.java)) }) { Text("화면 꾸미기") }
@@ -73,8 +73,8 @@ class MainActivity : ComponentActivity() {
                             OutlinedButton(onClick = { startActivity(Intent(this@MainActivity, NotificationSettingsActivity::class.java)) }) { Text("앱별 알림 규칙") }
                             Text("선택한 앱의 알림을 최근 500개까지 기기 내부에 암호화해 보관합니다. 앱별 묶음을 누르면 펼쳐지고, 개별 알림을 왼쪽으로 밀면 스탠바이 기록에서만 제거합니다.", style = MaterialTheme.typography.bodySmall)
                         }
-                        Section("접어도 이어서 보기") {
-                            Text("설정 → 디스플레이 → 커버 화면에서 앱 계속 사용에서 이 앱을 허용하면 닫은 뒤에도 이어서 시험할 수 있습니다.")
+                        Section("기기별 사용 안내") {
+                            Text("폴더블 기기는 제조사의 커버 화면 이어 사용 설정을 확인하세요. Galaxy Z Fold에서는 설정 → 디스플레이 → 커버 화면에서 앱 계속 사용에서 이 앱을 허용합니다.")
                             Text("보안 잠금은 유지됩니다. 앱을 강제 종료하거나 기기를 재부팅한 뒤에는 자동 스탠바이를 다시 켜세요.", style = MaterialTheme.typography.bodySmall)
                         }
                         if (notice.isNotEmpty()) Text(notice, color = MaterialTheme.colorScheme.tertiary)

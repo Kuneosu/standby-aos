@@ -12,8 +12,8 @@ android {
         targetSdk = 36
         versionCode = 26
         versionName = "0.13.0"
-        manifestPlaceholders["appLabel"] = "Fold 스탠바이"
-        manifestPlaceholders["notificationListenerLabel"] = "Fold 스탠바이 알림 패널"
+        manifestPlaceholders["appLabel"] = "Standby Screen"
+        manifestPlaceholders["notificationListenerLabel"] = "Standby Screen 알림 패널"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures { compose = true; buildConfig = true }
@@ -23,8 +23,8 @@ android {
             applicationIdSuffix = ".validation"
             versionNameSuffix = "-validation"
             matchingFallbacks += listOf("debug")
-            manifestPlaceholders["appLabel"] = "Fold 스탠바이 검사"
-            manifestPlaceholders["notificationListenerLabel"] = "Fold 스탠바이 검사 알림 패널"
+            manifestPlaceholders["appLabel"] = "Standby Screen 검사"
+            manifestPlaceholders["notificationListenerLabel"] = "Standby Screen 검사 알림 패널"
         }
     }
     testBuildType = "validation"

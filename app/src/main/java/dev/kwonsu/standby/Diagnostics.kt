@@ -28,16 +28,16 @@ object Diagnostics {
         val entry = DiagnosticEvent(Instant.now().toString(), event, details)
         mutableEvents.value = (listOf(entry) + mutableEvents.value).take(100)
         val json = JSONObject().put("time", entry.time).put("event", event).put("details", details).toString()
-        Log.i("FoldStandby", json)
+        Log.i("StandbyScreen", json)
         runCatching {
             if (journal.length() > 256_000) journal.writeText(journal.readLines().takeLast(200).joinToString("\n", postfix = "\n"))
             journal.appendText("$json\n")
-        }.onFailure { Log.w("FoldStandby", "진단 파일 기록 실패", it) }
+        }.onFailure { Log.w("StandbyScreen", "진단 파일 기록 실패", it) }
     }
 
     @Synchronized fun export(context: Context): File {
         val folder = File(context.cacheDir, "exports").apply { mkdirs() }
-        return File(folder, "fold-standby-diagnostics.jsonl").apply {
+        return File(folder, "standby-screen-diagnostics.jsonl").apply {
             writeText(if (journal.exists()) journal.readText() else "")
         }
     }

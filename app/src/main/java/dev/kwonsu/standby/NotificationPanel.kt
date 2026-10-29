@@ -103,7 +103,7 @@ internal fun NotificationPanel(feed: NotificationFeedState, backdrop: GraphicsLa
             }
             feed.historyWarning?.let { Text(it, Modifier.padding(vertical = 8.dp), color = Color(0xFFE6B6A7), fontSize = 12.sp) }
             val empty = when {
-                !feed.permissionGranted -> "알림 접근을 켜 주세요" to "잠금을 푼 뒤 Fold 스탠바이의 ‘알림 접근 허용’에서 설정할 수 있습니다."
+                !feed.permissionGranted -> "알림 접근을 켜 주세요" to "잠금을 푼 뒤 Standby Screen의 ‘알림 접근 허용’에서 설정할 수 있습니다."
                 !feed.connected || feed.unavailable -> "알림 연결 중" to "알림 접근 설정을 확인하면 다시 연결됩니다."
                 feed.items.isEmpty() -> "새 알림이 없습니다" to "선택한 앱의 알림이 도착하면 여기에 쌓입니다."
                 else -> null

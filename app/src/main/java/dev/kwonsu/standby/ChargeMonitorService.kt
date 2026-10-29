@@ -102,7 +102,7 @@ class ChargeMonitorService : Service() {
 
     private fun notification(text: String) = NotificationCompat.Builder(this, CHANNEL)
         .setSmallIcon(R.drawable.ic_standby)
-        .setContentTitle("Fold 스탠바이 · 자동 감시")
+        .setContentTitle("Standby Screen · 자동 감시")
         .setContentText(text)
         .setStyle(NotificationCompat.BigTextStyle().bigText(text))
         .setOngoing(true)

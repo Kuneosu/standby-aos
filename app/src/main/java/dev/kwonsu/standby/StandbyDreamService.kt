@@ -64,7 +64,7 @@ class StandbyDreamService : DreamService() {
 private class DreamClock(context: Context) : View(context) {
     var power = PowerState()
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = Typeface.create("sans-serif-light", Typeface.NORMAL) }
-    init { contentDescription = "Fold 스탠바이 화면보호기. 탭하여 종료"; isClickable = true }
+    init { contentDescription = "Standby Screen 화면보호기. 탭하여 종료"; isClickable = true }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)

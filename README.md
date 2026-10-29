@@ -1,14 +1,16 @@
 <p align="center">
-  <img src="docs/images/hero.png" alt="FOLD / STANDBY — 놓아두면, 시계." width="100%" />
+  <img src="docs/images/standby-screen-hero.png" alt="Standby Screen — 시계부터 알림까지, 나만의 대기 화면." width="100%" />
 </p>
 
-# Fold 스탠바이
+# Standby Screen
 
-**잠그고, 충전하고, 가로로. 놓아둔 갤럭시를 나만의 시계로.**
+**시계부터 알림까지, 나만의 대기 화면.**
 
-Galaxy Z Fold6에서 사용하려고 만든 Kotlin · Jetpack Compose 기반 Android 앱이다. 잠금·충전·가로 자세가 모두 갖춰지면 스탠바이가 열리고, 하나라도 해제되면 닫힌다. 시계와 사진, GIF, 알림, 출퇴근 게이지를 원하는 위치에 배치할 수 있다.
+놓아둔 Android 기기를 나만의 시계·정보 화면으로 바꾸는 Kotlin · Jetpack Compose 기반 앱이다. 잠금·충전·가로 자세가 모두 갖춰지면 스탠바이가 열리고, 하나라도 해제되면 닫힌다. 시계와 사진, GIF, 알림, 출퇴근 게이지를 원하는 위치에 배치할 수 있다.
 
-**0.13.0** · Android 12 이상 · Galaxy Z Fold6 중심 개발 · 개인용 실험 프로젝트
+**0.13.0** · Android 12 이상 · Galaxy Z Fold6에서 검증 · 개인용 실험 프로젝트
+
+특정 기종에 한정하지 않는 앱을 지향한다. 현재 제공하는 구현은 Android용이며, iOS는 향후 확장 가능성을 검토하는 단계다. iOS 앱은 아직 제공하지 않는다.
 
 [시작하기](#시작하기) · [직접 빌드](#직접-빌드) · [상세 사용 가이드](docs/user-guide.md) · [검증 기록](docs/work-shift-edit-0.13.0.md)
 
