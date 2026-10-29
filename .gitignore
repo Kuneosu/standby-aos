@@ -1,0 +1,22 @@
+.gradle/
+.kotlin/
+.idea/
+local.properties
+**/build/
+output/
+*.iml
+.DS_Store
+.env
+.env.*
+*.apk
+*.aab
+*.jks
+*.keystore
+keystore.properties
+__pycache__/
+
+# 원본 글꼴과 다운로드 묶음은 로컬에만 보관한다.
+/assets/
+app/src/main/res/font/*.ttf
+app/src/main/res/font/*.otf
+app/src/main/res/font/*.ttc

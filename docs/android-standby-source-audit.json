@@ -1,0 +1,587 @@
+{
+  "researched_at": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "target": {
+    "model": "Galaxy Z Fold6",
+    "android": "16",
+    "one_ui": "8.5",
+    "basis": "사용자 제공, 직접 기기 조회 미실행"
+  },
+  "repo": {
+    "url": "https://github.com/AdamWilkinson0/android-standby",
+    "branch": "main",
+    "commit": "93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0",
+    "latest_commit": {
+      "message": "readme changes",
+      "committed_at": "2026-07-22T09:43:32Z"
+    },
+    "license": null,
+    "release_count_observed": 0,
+    "file_count": 78,
+    "kotlin_count": 56,
+    "tree_truncated": false
+  },
+  "scope": {
+    "method": "GitHub 커넥터로 고정 커밋의 텍스트 파일 조회 및 소스 검색",
+    "text_file_count": 67,
+    "unread_files": [
+      ".gitignore",
+      "app/proguard-rules.pro",
+      "app/src/main/res/font/inter_variable.ttf",
+      "app/src/main/res/font/oswald_variable.ttf",
+      "app/src/main/res/font/rubik_variable.ttf",
+      "app/src/main/res/font/space_grotesk_variable.ttf",
+      "gradle.properties",
+      "gradle/wrapper/gradle-wrapper.jar",
+      "gradle/wrapper/gradle-wrapper.properties",
+      "gradlew",
+      "gradlew.bat"
+    ],
+    "test_paths": [],
+    "license_files": [],
+    "runtime": "미실행",
+    "build": "미실행",
+    "apk_reverse_engineering": "미실행",
+    "rea": "세션에 도구 노출 없음, 설치 및 실행 미실행"
+  },
+  "scans": [
+    {
+      "label": "전원 연결/해제 이벤트",
+      "pattern": "ACTION_POWER_CONNECTED|ACTION_POWER_DISCONNECTED",
+      "matches": []
+    },
+    {
+      "label": "부팅 이벤트",
+      "pattern": "BOOT_COMPLETED",
+      "matches": []
+    },
+    {
+      "label": "화면보호기",
+      "pattern": "DreamService|BIND_DREAM_SERVICE",
+      "matches": []
+    },
+    {
+      "label": "잠금 위 표시",
+      "pattern": "setShowWhenLocked|showWhenLocked|FLAG_SHOW_WHEN_LOCKED",
+      "matches": []
+    },
+    {
+      "label": "화면 깨우기",
+      "pattern": "setTurnScreenOn|turnScreenOn|FLAG_TURN_SCREEN_ON",
+      "matches": []
+    },
+    {
+      "label": "오버레이",
+      "pattern": "SYSTEM_ALERT_WINDOW|TYPE_APPLICATION_OVERLAY",
+      "matches": []
+    },
+    {
+      "label": "Foreground Service 시작",
+      "pattern": "startForeground",
+      "matches": []
+    },
+    {
+      "label": "외부 위젯 호스트",
+      "pattern": "AppWidgetHost",
+      "matches": []
+    },
+    {
+      "label": "접힘 대응",
+      "pattern": "FoldingFeature|WindowInfoTracker|androidx\\.window",
+      "matches": []
+    },
+    {
+      "label": "조도 센서",
+      "pattern": "TYPE_LIGHT|SensorManager",
+      "matches": []
+    },
+    {
+      "label": "배터리 상태 이벤트",
+      "pattern": "ACTION_BATTERY_CHANGED",
+      "matches": [
+        {
+          "path": "app/src/main/java/com/adamwilkinson/standby/data/battery/BatteryRepository.kt",
+          "line": 24,
+          "text": "* ACTION_BATTERY_CHANGED is sticky, so registration immediately returns"
+        },
+        {
+          "path": "app/src/main/java/com/adamwilkinson/standby/data/battery/BatteryRepository.kt",
+          "line": 34,
+          "text": "receiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED),"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob_sha": "5e4dd85b297ab04f982d2e229690e6d76babac48",
+      "size_bytes": 973,
+      "lines": 30,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/README.md"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "git_blob_sha": "9ca65c4b719347f7c5ddabef8313f4ed961ec131",
+      "size_bytes": 1718,
+      "lines": 60,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/build.gradle.kts"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "git_blob_sha": "439126866a95a1e95cd8464c1a56fe7c7f654ba2",
+      "size_bytes": 1431,
+      "lines": 38,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/AndroidManifest.xml"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/AppContainer.kt",
+      "git_blob_sha": "6bbca20357d384abab31c649a365865acf68c3b5",
+      "size_bytes": 1124,
+      "lines": 28,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/AppContainer.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/MainActivity.kt",
+      "git_blob_sha": "08a9e2591ce59c04afb4a13011ad68c9ab30740e",
+      "size_bytes": 6399,
+      "lines": 155,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/MainActivity.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/StandbyApplication.kt",
+      "git_blob_sha": "4902dca65039c35d838758ead96aa4bac95b5902",
+      "size_bytes": 275,
+      "lines": 15,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/StandbyApplication.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/battery/BatteryRepository.kt",
+      "git_blob_sha": "8fd7835aa923037fa2833784d7b59edaddb87c87",
+      "size_bytes": 2074,
+      "lines": 60,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/battery/BatteryRepository.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/calendar/CalendarRepository.kt",
+      "git_blob_sha": "595d99829a5cd78256f7f61958238c686f31336f",
+      "size_bytes": 2446,
+      "lines": 67,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/calendar/CalendarRepository.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/media/MediaNotificationListener.kt",
+      "git_blob_sha": "09a65bbc59c1d424ef87b923fb81c47f8a04a54a",
+      "size_bytes": 374,
+      "lines": 11,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/media/MediaNotificationListener.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/media/MediaSessionRepository.kt",
+      "git_blob_sha": "0db0382e54e09d37794a22b110a9816c2e6d755f",
+      "size_bytes": 7303,
+      "lines": 199,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/media/MediaSessionRepository.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/settings/SettingsRepository.kt",
+      "git_blob_sha": "b938fa8ff6f8194719c2a9ad533ca8f246d13a14",
+      "size_bytes": 5595,
+      "lines": 149,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/settings/SettingsRepository.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/weather/WeatherApi.kt",
+      "git_blob_sha": "7651e697539e141452b0342628f280bf491c6136",
+      "size_bytes": 1503,
+      "lines": 38,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/weather/WeatherApi.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/weather/WeatherModels.kt",
+      "git_blob_sha": "bb2a13a875914b1703f1ec099932fa434c2ac158",
+      "size_bytes": 2838,
+      "lines": 105,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/weather/WeatherModels.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/data/weather/WeatherRepository.kt",
+      "git_blob_sha": "7b648e1a515279c1efa900cb19d2312ca010cc9c",
+      "size_bytes": 5897,
+      "lines": 145,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/data/weather/WeatherRepository.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/BurnInDrift.kt",
+      "git_blob_sha": "7ddcd1fbe1921011e59f3187323b7f8b3e4330f6",
+      "size_bytes": 1411,
+      "lines": 41,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/BurnInDrift.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/ClockTicker.kt",
+      "git_blob_sha": "b462b747cf82f06474582c96a281e792bf4684ff",
+      "size_bytes": 635,
+      "lines": 21,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/ClockTicker.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/StandbyPage.kt",
+      "git_blob_sha": "72108d25a64ec436bf22b1a70666096391d8d494",
+      "size_bytes": 1026,
+      "lines": 27,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/StandbyPage.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/StandbyPagerScreen.kt",
+      "git_blob_sha": "507c2984a5326677baed3bb785f5b62d88a1d54a",
+      "size_bytes": 14148,
+      "lines": 345,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/StandbyPagerScreen.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/WidgetSize.kt",
+      "git_blob_sha": "cbbd1f87a92385dc5011dedc6f47c56e405f235a",
+      "size_bytes": 149,
+      "lines": 5,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/WidgetSize.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/components/MediaIcons.kt",
+      "git_blob_sha": "7974ce163503c7ee18019ba8f274ecb039cca602",
+      "size_bytes": 4288,
+      "lines": 125,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/components/MediaIcons.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/components/PageIndicator.kt",
+      "git_blob_sha": "c3d9325ffd852516012f819331f610a1edf4906a",
+      "size_bytes": 2606,
+      "lines": 77,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/components/PageIndicator.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/components/PermissionCard.kt",
+      "git_blob_sha": "6638f999f58ad4fb7da5716d1c099619324a61c6",
+      "size_bytes": 1777,
+      "lines": 52,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/components/PermissionCard.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/components/WeatherIcons.kt",
+      "git_blob_sha": "3d0fc08d1de71f9ede6ba96d3c00255985126b85",
+      "size_bytes": 5803,
+      "lines": 152,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/components/WeatherIcons.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/customize/ClockCustomizerOverlay.kt",
+      "git_blob_sha": "0959a10698f2adcaf2c69540cb7d7a78699e04f6",
+      "size_bytes": 9798,
+      "lines": 258,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/customize/ClockCustomizerOverlay.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/customize/PanePickerOverlay.kt",
+      "git_blob_sha": "bd637f6e07cd74e96a14f1e02e60fb76cc047e83",
+      "size_bytes": 5588,
+      "lines": 135,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/customize/PanePickerOverlay.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/onboarding/OnboardingScreen.kt",
+      "git_blob_sha": "ad88efcb2ff284eeb06cbf44a3d6bd679886c728",
+      "size_bytes": 7280,
+      "lines": 185,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/onboarding/OnboardingScreen.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/BatteryPage.kt",
+      "git_blob_sha": "c7fcbefcbbaa9690bfbee2c701063a0da8bf504c",
+      "size_bytes": 7993,
+      "lines": 228,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/BatteryPage.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/CalendarPage.kt",
+      "git_blob_sha": "d89cd459e633235393855e865e9d4b01c2785b14",
+      "size_bytes": 7965,
+      "lines": 214,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/CalendarPage.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/ClockPage.kt",
+      "git_blob_sha": "7309f892350758df6f72f5eed68c0553453bb8df",
+      "size_bytes": 1787,
+      "lines": 44,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/ClockPage.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/MediaPage.kt",
+      "git_blob_sha": "dafbe376c0527044c7dff607c03887611c6e7eeb",
+      "size_bytes": 14002,
+      "lines": 395,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/MediaPage.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/WeatherPage.kt",
+      "git_blob_sha": "bbc18f9c253efff3c1bdb52a63fc090dbf22241a",
+      "size_bytes": 10226,
+      "lines": 257,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/WeatherPage.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/AnalogFace.kt",
+      "git_blob_sha": "6e06513d5ea838f64b491c83f3120c3935b4cfc8",
+      "size_bytes": 3236,
+      "lines": 80,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/AnalogFace.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/ClockFace.kt",
+      "git_blob_sha": "8e8f5f70b4868bbb2a65eca585117280d7c94161",
+      "size_bytes": 1489,
+      "lines": 45,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/ClockFace.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/ClockFont.kt",
+      "git_blob_sha": "b3c4394ea5c6d0d8b533e5bc8b39ec22db9e940e",
+      "size_bytes": 917,
+      "lines": 26,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/ClockFont.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/DigitalFace.kt",
+      "git_blob_sha": "724d40acf1e8fd47522e0b6547fc66b3c4dc28dd",
+      "size_bytes": 2832,
+      "lines": 72,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/DigitalFace.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/FlipFace.kt",
+      "git_blob_sha": "db749e63d7faf6c2363ef433505352d67302b7eb",
+      "size_bytes": 3721,
+      "lines": 91,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/FlipFace.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/MinimalFace.kt",
+      "git_blob_sha": "0c19fa052ccb4a7bc0f1bfb50b3e1b8918102d30",
+      "size_bytes": 2748,
+      "lines": 72,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/pages/clockfaces/MinimalFace.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/settings/SettingsComponents.kt",
+      "git_blob_sha": "6c476f49ccc829e0f7728da706c6264457613427",
+      "size_bytes": 6589,
+      "lines": 199,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/settings/SettingsComponents.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/settings/SettingsScreen.kt",
+      "git_blob_sha": "624df50192bb9cfa5b33431d5cf297a335fbecde",
+      "size_bytes": 8976,
+      "lines": 219,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/settings/SettingsScreen.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/PaneWidget.kt",
+      "git_blob_sha": "a0ef2e4b867d96eaeb7477c7cbdf5a9a7f697c6d",
+      "size_bytes": 517,
+      "lines": 17,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/PaneWidget.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/SplitView.kt",
+      "git_blob_sha": "22ba3f05f3e4938b1f328d5d738fb65a10bc72aa",
+      "size_bytes": 8071,
+      "lines": 211,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/SplitView.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/BatteryPane.kt",
+      "git_blob_sha": "84d7ee6da9a1faf80288df9f153f426d7ab297e8",
+      "size_bytes": 1738,
+      "lines": 50,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/BatteryPane.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/CalendarPane.kt",
+      "git_blob_sha": "aef1792ba49635fdc94dc4ab0c1d2acea07fe17e",
+      "size_bytes": 2911,
+      "lines": 80,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/CalendarPane.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/ClockPane.kt",
+      "git_blob_sha": "efd1a53f778b8831d0749b34d4843ca6a07cd6ae",
+      "size_bytes": 859,
+      "lines": 25,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/ClockPane.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/MiniPanes.kt",
+      "git_blob_sha": "83b24c36b7f966bd240b9f9aa409ccd1a4b52ebf",
+      "size_bytes": 11589,
+      "lines": 307,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/MiniPanes.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/NowPlayingPane.kt",
+      "git_blob_sha": "528ce98f8a3ea19af387757577a36e42c59c6c3d",
+      "size_bytes": 7695,
+      "lines": 210,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/NowPlayingPane.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/PanePlaceholder.kt",
+      "git_blob_sha": "5bb47e863a590ef716b3efd5d8f59c7e10d0dd11",
+      "size_bytes": 1607,
+      "lines": 49,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/PanePlaceholder.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/split/panes/WeatherPane.kt",
+      "git_blob_sha": "dff2848e9e4f725bcaa7fc6413b8d8489de16dfa",
+      "size_bytes": 1792,
+      "lines": 46,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/split/panes/WeatherPane.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/theme/Accent.kt",
+      "git_blob_sha": "5b8d5bcf27c4702f6fdb8f4744db17b60fd06001",
+      "size_bytes": 1329,
+      "lines": 34,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/theme/Accent.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/theme/ArtColors.kt",
+      "git_blob_sha": "4b8be7c07705006afe162d4e83601f3642390fd7",
+      "size_bytes": 2354,
+      "lines": 61,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/theme/ArtColors.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/theme/Color.kt",
+      "git_blob_sha": "95b76041d6afc93e11e2dfb279796282440ee932",
+      "size_bytes": 338,
+      "lines": 11,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/theme/Color.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/theme/Theme.kt",
+      "git_blob_sha": "c770f8173a160297fbbe1569dfce6fa7f7ef52c4",
+      "size_bytes": 1062,
+      "lines": 35,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/theme/Theme.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/ui/theme/Type.kt",
+      "git_blob_sha": "c5d320036f2d495c6d5d577c669587cc0fa8ac62",
+      "size_bytes": 3359,
+      "lines": 116,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/ui/theme/Type.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/vm/BatteryViewModel.kt",
+      "git_blob_sha": "836193dd5e8b76114f69272e05216e0145f4a5b0",
+      "size_bytes": 579,
+      "lines": 16,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/vm/BatteryViewModel.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/vm/CalendarViewModel.kt",
+      "git_blob_sha": "ade0ab1701ac569bfc5639235ea25c4b80eb08d7",
+      "size_bytes": 1603,
+      "lines": 51,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/vm/CalendarViewModel.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/vm/MediaViewModel.kt",
+      "git_blob_sha": "41efef6c0ba76d8f50e2a86fee0413ef027b1af4",
+      "size_bytes": 536,
+      "lines": 17,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/vm/MediaViewModel.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/vm/SettingsViewModel.kt",
+      "git_blob_sha": "a43df52212ae15330d75db5c51540c3bae0fc3c0",
+      "size_bytes": 3428,
+      "lines": 100,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/vm/SettingsViewModel.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/vm/StandbyViewModelFactory.kt",
+      "git_blob_sha": "e20ac25dcf6b0a27451c894795d6bbf62db44c31",
+      "size_bytes": 1188,
+      "lines": 36,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/vm/StandbyViewModelFactory.kt"
+    },
+    {
+      "path": "app/src/main/java/com/adamwilkinson/standby/vm/WeatherViewModel.kt",
+      "git_blob_sha": "bf9a16e84bc96b31ff22f442f6b457c8eb48c960",
+      "size_bytes": 1160,
+      "lines": 41,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/java/com/adamwilkinson/standby/vm/WeatherViewModel.kt"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "git_blob_sha": "10ef0ced94ffbe8619b72c7c164416fd1f36c78d",
+      "size_bytes": 818,
+      "lines": 24,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/res/drawable/ic_launcher_foreground.xml"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "git_blob_sha": "5c84730caa7b72dfe85126020edffbd0e39e64fa",
+      "size_bytes": 341,
+      "lines": 7,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "git_blob_sha": "cdde88fb8db7277bddbe94548a4d53f72fecb17a",
+      "size_bytes": 121,
+      "lines": 5,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/res/values/colors.xml"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "git_blob_sha": "7f5ff95a77cf5a0f7f9c579ab70282dcffdb5acb",
+      "size_bytes": 109,
+      "lines": 5,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/res/values/strings.xml"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "git_blob_sha": "2bf50c5746853d982fdfce54ea84b07259ca49a6",
+      "size_bytes": 387,
+      "lines": 9,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/app/src/main/res/values/themes.xml"
+    },
+    {
+      "path": "build.gradle.kts",
+      "git_blob_sha": "132ad8d7ce1374cd9ce84e92bf38317090615e0e",
+      "size_bytes": 227,
+      "lines": 7,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/build.gradle.kts"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "git_blob_sha": "afef693c2f2250753347dd689495b3fb8b27a315",
+      "size_bytes": 2172,
+      "lines": 36,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/gradle/libs.versions.toml"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "git_blob_sha": "45c7921f42a7c3120730f1fb86580474adb2032e",
+      "size_bytes": 531,
+      "lines": 24,
+      "url": "https://github.com/AdamWilkinson0/android-standby/blob/93f7ab96bd7bda44ccaa81b80a4acbdfb9c251b0/settings.gradle.kts"
+    }
+  ],
+  "interpretation": "검색 결과 부재만으로 모든 가능성을 배제하지 않으며, Manifest와 진입점·배터리 처리·화면 구조의 소스 판독을 함께 사용했다. 코드에 있는 기능도 실제 실행 성공을 뜻하지 않는다."
+}

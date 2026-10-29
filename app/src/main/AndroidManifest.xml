@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <package android:name="com.android.systemui" />
+        <package android:name="com.kakao.talk" />
+    </queries>
+    <application
+        android:name=".StandbyApplication"
+        android:allowBackup="false"
+        android:label="${appLabel}"
+        android:icon="@drawable/ic_standby"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FoldStandby">
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EditorActivity" android:exported="false" />
+        <activity android:name=".NotificationSettingsActivity" android:exported="false" />
+        <activity
+            android:name=".StandbyActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity="${applicationId}.display"
+            android:excludeFromRecents="true"
+            android:showWhenLocked="true" />
+        <service
+            android:name=".ChargeMonitorService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="사용자가 켠 스탠바이 조건 감시. 잠금·충전·가로 자세가 모두 성립할 때만 시계를 표시하고 조건 해제 시 닫습니다. 알림에서 종료할 수 있습니다." />
+        </service>
+        <service
+            android:name=".StandbyNotificationListener"
+            android:label="${notificationListenerLabel}"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".StandbyDreamService"
+            android:enabled="false"
+            android:exported="true"
+            android:label="Fold 스탠바이 시계"
+            android:permission="android.permission.BIND_DREAM_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="android.service.dream" android:resource="@xml/dream" />
+        </service>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>
